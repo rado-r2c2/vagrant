@@ -27,7 +27,7 @@ sed -i 's/.*allow_world_readable_tmpfiles.*/allow_world_readable_tmpfiles = True
 echo "[4]: install docker & docker-composer"
 curl -fsSL https://get.docker.com | sh; >/dev/null
 usermod -aG docker jenkins # authorize docker for jenkins user
-curl -sL "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose >/dev/null
+curl -sL "https://github.com/docker/compose/releases/download/v2.32.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose >/dev/null
 chmod +x /usr/local/bin/docker-compose 
 
 echo "[5]: use registry without ssl"
