@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
     p1jenkins.vm.box = "debian/jessie64"
     p1jenkins.vm.hostname = "p1jenkins-pipeline"
     p1jenkins.vm.box_url = "debian/jessie64"
-    p1jenkins.vm.network :private_network, ip: "192.168.5.2"
+    p1jenkins.vm.network :private_network, ip: "192.168.56.2"
     p1jenkins.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
     srvdev.vm.box = "debian/jessie64"
     srvdev.vm.hostname = "srvdev-pipeline"
     srvdev.vm.box_url = "debian/jessie64"
-    srvdev.vm.network :private_network, ip: "192.168.5.3"
+    srvdev.vm.network :private_network, ip: "192.168.56.3"
     srvdev.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
     srvstage.vm.box = "debian/jessie64"
     srvstage.vm.hostname = "srvstage-pipeline"
     srvstage.vm.box_url = "debian/jessie64"
-    srvstage.vm.network :private_network, ip: "192.168.5.7"
+    srvstage.vm.network :private_network, ip: "192.168.56.7"
     srvstage.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
     srvprod.vm.box = "debian/jessie64"
     srvprod.vm.hostname = "srvprod-pipeline"
     srvprod.vm.box_url = "debian/jessie64"
-    srvprod.vm.network :private_network, ip: "192.168.5.4"
+    srvprod.vm.network :private_network, ip: "192.168.56.4"
     srvprod.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -85,7 +85,7 @@ Vagrant.configure("2") do |config|
     srvbdd.vm.box = "debian/jessie64"
     srvbdd.vm.hostname = "srvbdd-pipeline"
     srvbdd.vm.box_url = "debian/jessie64"
-    srvbdd.vm.network :private_network, ip: "192.168.5.6"
+    srvbdd.vm.network :private_network, ip: "192.168.56.6"
     srvbdd.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -105,7 +105,7 @@ Vagrant.configure("2") do |config|
     registry.vm.box = "debian/jessie64"
     registry.vm.hostname = "registry-pipeline"
     registry.vm.box_url = "debian/jessie64"
-    registry.vm.network :private_network, ip: "192.168.5.5"
+    registry.vm.network :private_network, ip: "192.168.56.5"
     registry.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -125,7 +125,7 @@ Vagrant.configure("2") do |config|
     gitlab.vm.box = "debian/jessie64"
     gitlab.vm.hostname = "gitlab-pipeline"
     gitlab.vm.box_url = "debian/jessie64"
-    gitlab.vm.network :private_network, ip: "192.168.5.10"
+    gitlab.vm.network :private_network, ip: "192.168.56.10"
     gitlab.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
